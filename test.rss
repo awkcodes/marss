@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>AWK</title>
+    <link>https://awkcodes.github.io</link>
+    <description>general ideas in a personal website</description>
+    <lastBuildDate>03 14 23</lastBuildDate>
+    <item>
+      <title>new title</title>
+      <link>https://hey.com</link>
+      <description>describe me more</description>
+      <guid>guid</guid>
+      <pubDate>date</pubDate>
+    </item>
+    <item>
+      <title>new title2</title>
+      <link>https://2hey.com</link>
+      <description>describe me more2</description>
+      <guid>guid2</guid>
+      <pubDate>date2</pubDate>
+    </item>
+    <item>
+      <title>new title3</title>
+      <link>https://hey.com3</link>
+      <description>describe me more3</description>
+      <guid>guid3</guid>
+      <pubDate>date3</pubDate>
+    </item>
+    <item>
+      <title>new titledd</title>
+      <link>https://hey.com</link>
+      <description>describe me more</description>
+      <guid>guid</guid>
+      <pubDate>date</pubDate>
+    </item>
+  </channel>
+</rss>
+
