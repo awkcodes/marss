@@ -1,13 +1,18 @@
 <?php
-    # open html file and parse it
+
+# open html file and parse it
+function openParseHTML(){
     $html = new DOMDocument();
     $html->formatOutput = true;
     $htmlpath = $argv[2] or exit("html file should be provided or provide a description");
     $html->loadHTMLFile($htmlpath);
     $htmlTitle = $html->getElementById('title-rss');
     $htmlDescription = $html->getElementById('description-rss');
+}
 
-    # open rss.xml and create the file if if didn't exist in the working dir
+# open rss.xml and create the file if if didn't exist in the working dir
+function openParseOrCreateXML(){
+    $xml = simplexml_load_file("rss.xml") or die("file not found");
     $xml = new DOMDocument("1.0");
     $xml->encoding="utf-8";
     $xml->formatOutput=true;
@@ -60,6 +65,7 @@
     $rssItem->appendChild($itemPubDate);
 
     $channel->appendChild($rssItem);
-    echo "".$xml->saveXML()."";
+}
+echo "".$xml->saveXML()."";
 ?>
 
