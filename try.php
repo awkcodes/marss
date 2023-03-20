@@ -66,7 +66,7 @@ if (!$xml->load('rss.xml')){
     $rssItem->appendChild($itemPubDate);
 
     $channel->appendChild($rssItem);
-    echo "".$xml->saveXML()."";
+    echo $xml->saveXML();
 
 } else {
     $channels = $xml->getElementsByTagName('channel');
@@ -96,7 +96,7 @@ if (!$xml->load('rss.xml')){
 
     $channel->appendChild($rssItem);
 
-    echo "".$xml->saveXML()."";
+    echo $xml->save("rss.xml") . " bytes written";
 }
 ?>
 
