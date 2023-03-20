@@ -1,9 +1,4 @@
 <?php
-#TODO:
-# =find another function for opening xml
-# =make sure there is no warning left to not get in the file 
-# = at the end
-# =make documentation and test the code very well practically and maybe in code
 
 # open html file and parse it
 $html = new DOMDocument();
