@@ -1,4 +1,4 @@
 <?php
-    var_dump($argc);
-    var_dump($argv);
+$xmldata = simplexml_load_file("test.rss");
+echo $xmldata->channel->title;
 ?>
