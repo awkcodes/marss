@@ -30,7 +30,7 @@ if (!$xml->load('rss.xml')){
     $title->textContent = $configs['title'];
     $link->textContent = $configs['link'];
     $description->textContent = $configs['description'];
-    $lastBuildDate->textContent = date("m d y");
+    $lastBuildDate->textContent = date("r", time());
 
     $channel->appendChild($title);
     $channel->appendChild($author);
@@ -52,7 +52,7 @@ if (!$xml->load('rss.xml')){
     $itemDescription->textContent = $htmlDescription->nodeValue;
     $itemTitle->textContent = $htmlTitle->nodeValue;
     $itemGuid->textContent =$fileLink; 
-    $itemPubDate->textContent =date("y m d");
+    $itemPubDate->textContent =date("r" ,time());
 
     $rssItem->appendChild($itemTitle);
     $rssItem->appendChild($itemLink);
@@ -81,7 +81,7 @@ if (!$xml->load('rss.xml')){
     $itemDescription->textContent = $htmlDescription->nodeValue;
     $itemTitle->textContent = $htmlTitle->nodeValue;
     $itemGuid->textContent =$fileLink; 
-    $itemPubDate->textContent =date("y m d");
+    $itemPubDate->textContent =date("r", time());
 
     $rssItem->appendChild($itemTitle);
     $rssItem->appendChild($itemLink);
