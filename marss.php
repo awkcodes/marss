@@ -7,6 +7,9 @@ $htmlpath = $argv[2] or exit("html file should be provided");
 $html->loadHTMLFile($htmlpath);
 $htmlTitle = $html->getElementById('title-rss') or exit("html element title-rss id not found");
 $htmlDescription = $html->getElementById('description-rss') or exit("html element description-rss id not found");
+# check for null in case this item didn't exist and use current time for pubDate
+# use Y-m-d format
+$htmlPubDate = $html->getElementById('pubdate-rss');
 
 $configs = include 'config.php';
 # open rss.xml file to see if it exists
@@ -52,8 +55,10 @@ if (!$xml->load('rss.xml')){
     $itemDescription->textContent = $htmlDescription->nodeValue;
     $itemTitle->textContent = $htmlTitle->nodeValue;
     $itemGuid->textContent =$fileLink; 
-    $itemPubDate->textContent =date("r" ,time());
-
+    
+    if ($htmlPubDate) $itemPubDate->textContent = date("D, d M Y H:i:s T", strtotime($htmlPubDate));
+    else $itemPubDate->textContent = date("r", time());
+    
     $rssItem->appendChild($itemTitle);
     $rssItem->appendChild($itemLink);
     $rssItem->appendChild($itemDescription);
@@ -81,8 +86,9 @@ if (!$xml->load('rss.xml')){
     $itemDescription->textContent = $htmlDescription->nodeValue;
     $itemTitle->textContent = $htmlTitle->nodeValue;
     $itemGuid->textContent =$fileLink; 
-    $itemPubDate->textContent =date("r", time());
-
+    if ($htmlPubDate) $itemPubDate->textContent = date("D, d M Y H:i:s T", strtotime($htmlPubDate));
+    else $itemPubDate->textContent = date("r", time());
+ 
     $rssItem->appendChild($itemTitle);
     $rssItem->appendChild($itemLink);
     $rssItem->appendChild($itemDescription);
