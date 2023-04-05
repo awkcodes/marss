@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# where to intall marss ?
+INSTALL_DIST=~/.local/bin/
+
+echo $INSTALL_DIST 
+chmod +x ./marss.php 
+cp -r ./marss.php ./config.php $INSTALL_DIST
+mv $INSTALL_DIST/marss.php $INSTALL_DIST/marss

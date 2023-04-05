@@ -4,6 +4,7 @@
 usage :  
 
 first go to config.php and edit the variables inside it to fit your publication
+  
 
 
 ```
@@ -17,4 +18,6 @@ $ php marss.php http://link.publication file.html 2343459992
 ```
 
 
-
+if you want automatic installation use install script in the folder , this will install the script
+and the configs to ~/.local/bin/ if you want to change the where to install marss change it from the
+script.

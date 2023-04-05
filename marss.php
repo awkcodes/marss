@@ -1,3 +1,6 @@
+#!/usr/bin/env php
+
+
 <?php
 
 # open html file and parse it
