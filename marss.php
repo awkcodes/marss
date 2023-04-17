@@ -23,6 +23,7 @@ $xml = new DOMDocument("1.0");
 $xml->formatOutput=true;
 
 if (!$xml->load('rss.xml')){ 
+    echo "rss.xml file not found creating a new one";
     $xml->encoding="utf-8";
     $rss = $xml->createElement("rss");
     $rss ->setAttribute("version", "2.0");
