@@ -19,5 +19,5 @@ $ php marss.php http://link.publication file.html 2343459992
 
 
 if you want automatic installation use install script in the folder , this will install the script
-and the configs to ~/.local/bin/ if you want to change the where to install marss change it from the
-script.
+and the configs to ~/.local/bin/ if you want to change the directory where marss is installed, 
+change it in the script.
